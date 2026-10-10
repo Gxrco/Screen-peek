@@ -4,6 +4,8 @@ Mod para Claude Code que muestra **lo que ve el modelo mientras trabaja**: cada 
 
 Útil cuando Claude trabaja en otro servidor (SSH, código remoto) y toma capturas que tú no puedes ver.
 
+<img width="1200" height="657" alt="Screen Recording 2026-10-10 at 2 20 33 PM" src="https://github.com/user-attachments/assets/fc901410-27f3-4694-88ae-42154905fe88" />
+
 ## Instalación
 
 En una sesión de Claude Code en la terminal, escribe:
