@@ -1,0 +1,13 @@
+{
+  "name": "screen-peek",
+  "description": "Mod de Claude Code que muestra en vivo las capturas que ve el modelo",
+  "owner": {
+    "name": "gxrco"
+  },
+  "plugins": [
+    {
+      "name": "screen-peek",
+      "source": "./"
+    }
+  ]
+}
