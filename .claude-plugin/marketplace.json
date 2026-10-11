@@ -1,6 +1,6 @@
 {
   "name": "screen-peek",
-  "description": "Mod de Claude Code que muestra en vivo las capturas que ve el modelo",
+  "description": "Claude Code mod that shows the screenshots the model sees in a live panel",
   "owner": {
     "name": "gxrco"
   },

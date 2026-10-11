@@ -28,8 +28,12 @@ In a Claude Code terminal session, type:
 | Previous / next screenshot | `p` / `n` |
 | Return to the latest screenshot | `l` |
 | Open the screenshot in the system viewer | `o` |
+| Collapse / expand browser activity | `a` |
+| Refresh the displayed image | `r` |
 
-While a screenshot is being taken, the panel shows `⏳ Processing screenshot…` and the status bar shows `📸 capturing…`. Below the image is a log of browser activity (navigation, clicks, Playwright scripts).
+While a screenshot is being taken, the panel shows an amber `◌ CAPTURING` indicator and the status bar shows `📸 capturing…`. Below the image is a log of browser activity (navigation, clicks, Playwright scripts).
+
+The panel uses theme colors and a rounded preview frame, with a live/history indicator and image dimensions. The preview and activity list adapt to the panel size; collapse activity to give screenshots more room. Click the panel to use its keyboard shortcuts.
 
 ## Requirements and limitations
 
@@ -38,7 +42,8 @@ While a screenshot is being taken, the panel shows `⏳ Processing screenshot…
 - The panel renders **PNG files up to 2 MiB**. JPEG screenshots are listed but not rendered (request `type: "png"` when taking them).
 - “Open” uses the macOS `open` command.
 - Only images that reach the model appear. If Claude takes a screenshot with a script but never opens it, the model doesn't see it either.
-- Each screenshot is saved in `/tmp/screen-peek/<session-id>/` (the latest 30 per session, across the 5 most recently used sessions; older screenshots and sessions are deleted from disk). When resuming a session—for example, after returning from the Agents view—the panel restores its screenshots. macOS periodically cleans `/tmp`.
+- Each screenshot and its gallery index are saved in `/tmp/screen-peek/<session-id>/` (the latest 30 per session, across the 5 most recently used sessions in the plugin store; older screenshots and sessions are deleted from disk). The panel recovers saved screenshots when it is recreated or a session resumes, including when switching between local and installed copies of the mod. It also remembers the selected screenshot and activity visibility. Older screenshots without an index are recovered from their files. macOS periodically cleans `/tmp`.
+- If the image goes blank after switching views, press `r` in the panel or run `/peek` to refresh it.
 
 ## Development
 

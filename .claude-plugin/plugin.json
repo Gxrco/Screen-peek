@@ -1,7 +1,7 @@
 {
   "name": "screen-peek",
   "version": "0.2.0",
-  "description": "Panel en vivo con las capturas (Playwright, Read de imágenes, cualquier MCP) que ve el modelo",
+  "description": "Live panel of the screenshots Claude sees from Playwright, image reads, and any MCP tool",
   "author": { "name": "gxrco" },
   "types": "./types/index.d.ts"
 }
