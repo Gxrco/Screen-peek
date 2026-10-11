@@ -14,6 +14,6 @@ export type Activity = { id: string; tool: string; label: string; at: number; is
 
 declare module 'claude-code' {
   interface PluginState {
-    'screen-peek': { shots: Shot[]; activity: Activity[]; selected: string | null }
+    'screen-peek': { shots: Shot[]; activity: Activity[]; selected: string | null; showActivity: boolean; imageRevision: number }
   }
 }
